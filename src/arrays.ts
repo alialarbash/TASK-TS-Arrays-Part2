@@ -10,9 +10,15 @@
  */
 
 function isArrayLengthOdd(numbers: number[]): boolean {
-  // Your code here
+  let len: number = numbers.length;
+  let result: boolean;
+  if (len % 2 == 0) {
+    result = false;
+  } else {
+    result = true;
+  }
 
-  return false; // replace false with what you see is fit
+  return result; // replace false with what you see is fit
 }
 
 /**
@@ -27,9 +33,15 @@ function isArrayLengthOdd(numbers: number[]): boolean {
  */
 
 function isArrayLengthEven(numbers: number[]): boolean {
-  // Your code here
+  let len: number = numbers.length;
+  let result: boolean;
+  if (len % 2 == 0) {
+    result = true;
+  } else {
+    result = false;
+  }
 
-  return false; // replace false with what you see is fit
+  return result; // replace false with what you see is fit
 }
 
 /**
@@ -41,9 +53,12 @@ function isArrayLengthEven(numbers: number[]): boolean {
  * addLailaToArray(["Mshary", "Hasan"]); // => ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors: string[]): string[] {
-  // Your code here
+  // let newArray: string[] = instructors.slice(0, -1);
+  // newArray.push("Laila");
+  instructors.push("Laila");
 
-  return []; // replace empty array with what you see is fit
+  // return newArray; // replace empty array with what you see is fit
+  return instructors;
 }
 
 /**
@@ -54,10 +69,10 @@ function addLailaToArray(instructors: string[]): string[] {
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]); // => "Italy"
  */
-function eliminateTeam(teams: string[]): string {
-  // Your code here
+function eliminateTeam(teams: string[]): string | undefined {
+  let result: string | undefined = teams.pop();
 
-  return ""; // replace empty string with what you see is fit
+  return result; // replace empty string with what you see is fit
 }
 
 export { isArrayLengthOdd, isArrayLengthEven, addLailaToArray, eliminateTeam };
